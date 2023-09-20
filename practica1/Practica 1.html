@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Práctica 1 | Ibero Puebla</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container px-5">
+                    <a class="navbar-brand">Menu</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../">Home</a></li>                    
+                            <li class="nav-item"><a class="nav-link" href="../index.html#resumen">Acerca de mi</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#practicas">Prácticas</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Seccion TITULO de Portafolio-->
+            <header class="bg-primary py-2 mt-6">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start">
+                                <h1 class="display-6 fw-bolder text-white mb-2">Portafolio de Actividades</h1>
+                                <h1 class="display-8 fw-bolder text-white mb-2">Introduccion a Ing. Mecatrónica</h1>
+                                <p id="resumen" class="display-8 fw-normal text-white-50 mb-4">Estudiante de Ingeniería Mecatrónica | Universidad Iberoamericana Puebla, México.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Seccion TITULO de la Práctica-->
+            <section class="py-3" id="scroll-target">
+                <div class="container px-5 my-2">
+                    <!-- Post header-->
+                    <header class="mb-4">
+                        <!-- Post title-->
+                        <h1 class="fw-bolder mb-1">Practica 1: Introducción al arduino I</h1>
+
+                        <!-- ETIQUETA DE ALUMNO (Hacer una por cada alumno)-->
+                            <img class="img-fluid rounded-circle" width="50px" src="assets/omar.png" alt="..." />
+                            <div class="ms-2">
+                                <div class="fw-bold">Omar Ramírez de la Cruz</div>
+                                <div class="text-muted">Ingeniería Mecatrónica</div>
+                            </div>
+                        <!--Aqui termina etiqueta de alumno-->
+
+                        <div class="text-muted fst-italic mt-2 mb-2">Fecha: 21 de Agosto del 2023</div>
+                        <!-- ETIQUETAS O TOPICOS IMPORTANTES DE LA PRACTICA-->
+                        <a class="badge bg-primary text-decoration-none link-light" >Arduino</a>
+                        <a class="badge bg-primary text-decoration-none link-light" >Electrónica</a>
+
+                    </header>
+                </div>
+            </section>
+
+            <!-- Seccion de CONTENIDO de la Práctica-->
+            <section>
+                <div class="container px-5">
+
+                    <figure class="mb-4"><img class="img-fluid rounded" width="800px" src="img/codigo-arduino.png" alt="..." /></figure>
+                                
+                    <p id="resumen">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5" >- Resumen -</h2>
+                        <p class="fs-6 mb-4">En la practrica 1 Vamos a realizar 17 diferentes actividades con el arduino, desde ver el funcionamiento de la placa con los leds que contiene el mismo led hasta tener inputs y outputs como leds y botones, no son practicas complicadas pero más que enseñarnos al uso del arduino viene siendo un repaso del uso basico del arduino.</p>
+                        
+                        <p id="intro">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5" >- Introducción -</h2>
+                        <p class="fs-6 mb-4">En esta practica utilizaremos el Arduino Uno, con este y ayuda de otros materiales podremos hacer diferentes circuitos, simples, de no más de 5 elementos conectados al mismo tiempo, pero con la suficiente complicidad para entender el uso del arduino no solo como un elemento de conexion sino tambien de programación, puesto que diferentes codigo puedes terminar haciendo lo mismo de manera más o menos eficiente, eso es lo que se va a ver en las practicas siguientes.</p>
+                        <p class="fs-6 mb-4">Con lo realizado en esta practicas ya tenemos una base de conocimiento sobre el arduino, el como conectar los componentes, ver los inputs y outputs, y el como programar los componentes que conectamos para que hagan lo que se requiere o busca hacer.</p>
+                        
+                        <p id="materiales">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5" >- Materiales -</h2>
+                        <p class="fs-6 mb-4">-Arduino Uno</p>
+                        <p class="fs-6 mb-4">-Protoboard</p>
+                        <p class="fs-6 mb-4">-4 LEDS (no importa el color)</p>
+			<p class="fs-6 mb-4">-6 resistencias de 220 ohms</p>
+                        <p class="fs-6 mb-4">-2 Push Button</p>
+			<p class="fs-6 mb-4">-Cables dupoint macho-macho (tambien conocidos como jumpers)</p>
+                        <p class="fs-6 mb-4">-1 Display de 7 segmentos</p>
+                        
+                        <p id="desarrollo">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">- Desarrollo -</h2>
+                        <p class="fs-6 mb-4">Para el desarollo de las practicas se va a comentar individualmente las 17 practicas en forma de listado siguiendo el orden de las practicas.</p>
+
+                        <p id="Practica 1">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 1 ~</h2>
+                        <p class="fs-6 mb-4">Para la practica 1 solo necesitaremos el Arduino Uno, la practica 1 consiste en encender el led que contiene la mis placa del Arduino Uno</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">para la programación tenemos solamente un pinMode, siendo en del arduino, al cual simplemente le estamos dando el valor de HIGH para que se mantenga encendido, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-0">void setup()</p>
+			    <p class="fs-6 mb-0">{</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(LED_BUILTIN, OUTPUT);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0"></p>
+			    <p class="fs-6 mb-0">void loop()</p>
+			    <p class="fs-6 mb-0">{</p>
+		            <p class="fs-6 mb-0">   digitalWrite(LED_BUILTIN, HIGH);</p>
+  			    <p class="fs-6 mb-0">}</p>
+
+                            <p id="Diseño fisico">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">Para las conexiones fisicas simplemente conectamos el Arduino Uno con la computadora a travez de su cable USB para que se suba el codigo y el LED de la placa se encienda como se asegura el codigo.</p>
+			    <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduino.png" alt="..." /></figure>                            
+
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">No se utilizaron cables dupoint ni una protoboard en este caso, solamente hubo conexion usb a la placa de Arduino Uno.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Se puede ver como el led del arduino permanece encendido, es el que se encuentra en la parte izquierda superior con la simbología de L a su costado.</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/1.mp4" type="video/mp4">
+                            </video></p></figure>
+
+                        <p id="Practica 2">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 2 ~</h2>
+                        <p class="fs-6 mb-4">Para la practica 2 solo es necesario el Arduino Uno, la practica 2 apagar el led del Arduino Uno.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">para la programación tenemos solamente un pinMode, siendo en del arduino, al cual simplemente le estamos dando el valor de LOW para que se mantenga apagado, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-0">void setup()</p>
+			    <p class="fs-6 mb-0">{</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(LED_BUILTIN, OUTPUT);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0"></p>
+			    <p class="fs-6 mb-0">void loop()</p>
+			    <p class="fs-6 mb-0">{</p>
+		            <p class="fs-6 mb-0">   digitalWrite(LED_BUILTIN, LOW);</p>
+  			    <p class="fs-6 mb-0">}</p>
+                            
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">Para las conexiones fisicas simplemente conectamos el Arduino Uno con la computadora a travez de su cable USB para que se suba el codigo y el LED de la placa se apague como se asegura el codigo.</p>
+			    <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduino.png" alt="..." /></figure>                            
+
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">No se utilizaron cables dupoint ni una protoboard en este caso, solamente hubo conexion usb a la placa de Arduino Uno.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">En este caso se puede ver como ahora el led que estaba encendido ahora se encuentra apagado.</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/2.mp4" type="video/mp4">
+                            </video></p></figure>
+
+                        <p id="Practica 3">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 3 ~</h2>
+                        <p class="fs-6 mb-4">Para la practica 3 solo necesitaremos el Arduino Uno, la practica 3 consiste hacer parpadear el LED que contiene la placa Arduino Uno.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">para la programación tenemos solamente un pinMode, siendo en del arduino, al cual simplemente le estamos dando el valor de HIGH un delay intermedio y el valor de LOW para obtener el parpadeo del LED, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-0">void setup()</p>
+			    <p class="fs-6 mb-0">{</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(LED_BUILTIN, OUTPUT);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0"></p>
+			    <p class="fs-6 mb-0">void loop()</p>
+			    <p class="fs-6 mb-0">{</p>
+		            <p class="fs-6 mb-0">   digitalWrite(LED_BUILTIN, HIGH);</p>
+		            <p class="fs-6 mb-0">   delay(100);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(LED_BUILTIN, LOW);</p>
+		            <p class="fs-6 mb-0">   delay(100);</p>
+  			    <p class="fs-6 mb-0">}</p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">Para las conexiones fisicas simplemente conectamos el Arduino Uno con la computadora a travez de su cable USB para que se suba el codigo y el LED de la placa se encienda y apague como se asegura el codigo.</p>
+			    <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduino.png" alt="..." /></figure>
+                            
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">No se utilizaron cables dupoint ni una protoboard en este caso, solamente hubo conexion usb a la placa de Arduino Uno.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Podemos apreciar como el led parpadea con un retraso de milisegundos pero siendo el tiempo suficiente para que se note el parpadeo del LED de la placa Arduino Uno.</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/3.mp4" type="video/mp4">
+                            </video></p></figure>
+
+                        <p id="Practica 4">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 4 ~</h2>
+                        <p class="fs-6 mb-4">Originalmente la practica 4 es la nombrada practica 0 pero en su relevancia de acciones la tomare como la practica 4. Para la practica 1 solo necesitaremos el Arduino Uno, la practica 4 consiste en hacer parpadear el LED de la placa Arduino Uno, pero más lento.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">para la programación tenemos solamente un pinMode, siendo en del arduino, al cual simplemente le estamos dando el valor de HIGH un delay intermedio y el valor de LOW para obtener el parpadeo del LED, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-0">void setup()</p>
+			    <p class="fs-6 mb-0">{</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(LED_BUILTIN, OUTPUT);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0"></p>
+			    <p class="fs-6 mb-0">void loop()</p>
+			    <p class="fs-6 mb-0">{</p>
+		            <p class="fs-6 mb-0">   digitalWrite(LED_BUILTIN, HIGH);</p>
+		            <p class="fs-6 mb-0">   delay(1000);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(LED_BUILTIN, LOW);</p>
+		            <p class="fs-6 mb-0">   delay(1000);</p>
+  			    <p class="fs-6 mb-0">}</p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">Para las conexiones fisicas simplemente conectamos el Arduino Uno con la computadora a travez de su cable USB para que se suba el codigo y el LED de la placa parpadé como se asegura el codigo.</p>
+                            <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduino.png" alt="..." /></figure>                            
+
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">No se utilizaron cables dupoint ni una protoboard en este caso, solamente hubo conexion usb a la placa de Arduino Uno.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Podemos apreciar como el led parpadea con un retraso de un segundo.</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/4.mp4" type="video/mp4">
+                            </video></p></figure>
+
+
+
+                        <p id="Practica 5">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 5 ~</h2>
+                        <p class="fs-6 mb-4">En la practica 5 utilizaremos un elemento externo a la placa de Arduino Uno, siendo este un LED y una resistencia para evitar quemarlo.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">para la programación tenemos solamente un pinMode, ahora con valor del puerto de la placa Arduino Uno, al cual simplemente le estamos dando el valor de HIGH un delay intermedio y el valor de LOW para obtener el parpadeo del LED, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-0">void setup()</p>
+			    <p class="fs-6 mb-0">{</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(13, OUTPUT);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0"></p>
+			    <p class="fs-6 mb-0">void loop()</p>
+			    <p class="fs-6 mb-0">{</p>
+		            <p class="fs-6 mb-0">   digitalWrite(13, HIGH);</p>
+		            <p class="fs-6 mb-0">   delay(1000);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(13, LOW);</p>
+		            <p class="fs-6 mb-0">   delay(1000);</p>
+  			    <p class="fs-6 mb-0">}</p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">Para las conexiones fisicas Conectamos una resistencia al gnd de la placa Arduino, que conectara con el Led para que de esta forma llegue las señales del parpadeo.</p>
+                            <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduinoLed.png" alt="..." /></figure>
+
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">Para la construcción del circuito de esta practica conectaremos la resistencia al pinmode y esta resistenica ira direcmantente al led que cerrara el circuito para que el LED encienda, de hehco la imagen de referencia esta mal puesto que al no tener resistencia lo más posible es que ese led este quemado.</p>
+                          
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Ahora en vez de ser el led de a placa Arduino el que se encienda lo hace el led que conectamos a los puertos, puesto que hemos dado la señal de que el pinmode 13 en este caso sea el que tenga señales de HIGH y LOW haciendo que el LED se encuentre parpadeando.</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/5.mp4" type="video/mp4">
+                            </video></p></figure>
+
+
+
+                        <p id="Practica 6">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 6 ~</h2>
+                        <p class="fs-6 mb-4">En la plactica 6 utilizamos cables dupoint, la protoboard, un LED, una resistencia y el Arduin Uno para seguir haciendo parpadear el led pero ahora con conexiones en la porotboard par aprneder su funcionamiento.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">para la programación seguimos teniendo solamente un pinMode, seguimos con el led parpadeante (pinmode 13), al cual simplemente le estamos dando el valor de HIGH un delay intermedio y el valor de LOW para obtener el parpadeo del LED, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-0">void setup()</p>
+			    <p class="fs-6 mb-0">{</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(13, OUTPUT);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0"></p>
+			    <p class="fs-6 mb-0">void loop()</p>
+			    <p class="fs-6 mb-0">{</p>
+		            <p class="fs-6 mb-0">   digitalWrite(13, HIGH);</p>
+		            <p class="fs-6 mb-0">   delay(1000);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(13, LOW);</p>
+		            <p class="fs-6 mb-0">   delay(1000);</p>
+  			    <p class="fs-6 mb-0">}</p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">Introduciendo una de las herramientas más importantes y que más vamos a usar, la protoboard entra en la practica junto a los cables dupoint, conectaremos todavia directamente el circuito, con ayuda de los cables dupoint macho -macho, a una resistencia y led para que logre llegar la informacion.</p>
+			    <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="500px" src="img/arduinoProtoLed.png" alt="..." /></figure>
+                            
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">la Protoboard nos ayuda a conectar elementos de forma vertical en los centros y horizontal en las cargas, de forma que conectamos verticalmente el pin13 a la resistencia, la resistencia al catodo del led, el anodo del led al gnd del Arduino, como se aprecia en la imagen anterior.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Podemos apreciar como el LED sigue parpadeando pero ahora gracias a las conexiones hechas en la protoboard, forma de aprender a usar la protoboard pero no completamente ya que en la siguiente plactica usaremos sus terminales de gnd y vcc.</p>
+			    <figure class="mb-4" align="center"><video width="80%"  controls>                            
+			    <source src="video/6.mp4" type="video/mp4">
+                            </video></p></figure>
+
+
+
+                        <p id="Practica 7">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 7 ~</h2>
+                        <p class="fs-6 mb-4">Para la practica 7 utilizaremos 1 led, 1 resistencia, cables dupoint, 1 protoboard y el Arduino Uno, en esta plactica haremos parpadear un LED siguiendo aprendiendo a usar la Protoboard</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">para la programación seguimos teniendo solamente un pinMode, seguimos con el led parpadeante (pinmode 13), al cual simplemente le estamos dando el valor de HIGH un delay intermedio y el valor de LOW para obtener el parpadeo del LED, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-0">void setup()</p>
+			    <p class="fs-6 mb-0">{</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(13, OUTPUT);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0"></p>
+			    <p class="fs-6 mb-0">void loop()</p>
+			    <p class="fs-6 mb-0">{</p>
+		            <p class="fs-6 mb-0">   digitalWrite(13, HIGH);</p>
+		            <p class="fs-6 mb-0">   delay(1000);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(13, LOW);</p>
+		            <p class="fs-6 mb-0">   delay(1000);</p>
+  			    <p class="fs-6 mb-0">}</p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">Ahora utilizanod más cables dupoint, seguimos con el led y la resistencia conectada a la Protoboard pero ahora no estan conectado directamente, vemos como el gnd llega a una lina al igual que lo hace el vcc y de alli se conectan directamente al led, util si tenemos más de un componente que utilice el mismo pinmode como veremos más adelante .</p>
+                            <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduinoProtoLedII.png" alt="..." /></figure>
+
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">El pinmode se conecta directamente a la resistencia y la resistencia al LED como veniamos haciendo en la practica anterior pero ahora el gnd llega desde la misma protoboard y no directamente de la placa arduino, se hace una especie de puente que vemos como llega el gnd a linea de gnd y de alli el led obtiene su tierra, que sigue siendo proporcionada por el arduino pero ahora no es directa y esto nos sirve por si queremos tener más de una conexion que utilice el voltaje o la tierra.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Seguimos apreciando el parapdeo del led pero ahora con más cables y se podria decir que de una forma más ordenada si los cables dupoint fuesen a la medida como se ve en la imagen, aunque en la realidad es todo un nudo de cables y lo veran más adelante.</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/7.mp4" type="video/mp4">
+                            </video></p></figure>
+
+
+                        <p id="Practica 8">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 8 ~</h2>
+                        <p class="fs-6 mb-4">Para la Practica 8 utilizaremos 2 leds, 2 resistencias, 1 protoboard, cables dupoint y el Arduino Uno, ahora haremos parpadear a dos leds simultáneamente.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">para la programación tenemos solamente un pinMode, siendo el pinmode 13, al cual simplemente le estamos dando el valor de HIGH y low para crear un parpadeo, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-0">void setup()</p>
+			    <p class="fs-6 mb-0">{</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(13, OUTPUT);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0"></p>
+			    <p class="fs-6 mb-0">void loop()</p>
+			    <p class="fs-6 mb-0">{</p>
+		            <p class="fs-6 mb-0">   digitalWrite(13, HIGH);</p>
+		            <p class="fs-6 mb-0">   delay(1000);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(13, LOW);</p>
+		            <p class="fs-6 mb-0">   delay(1000);</p>
+  			    <p class="fs-6 mb-0">}</p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">Ahora en las conexiones fisicas, manteniendo el mismo sistema de antes, ahora conectamos otra resistencia a la columna donde llega el pin13 y otro LED al que le llega la resistencia y el gnd de la misma protoboard.</p>
+                            <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduino2Leds1pin.png" alt="..." /></figure>                            
+
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">Siguiendo la estructura anterior ahora se conecta un cable dupoint de la resistencia a otra para que siga teniendo la señal del pin13, la cual se conecta al catodo de otro led que recibira igualmente un cable dupoint que lo conecte al gnd.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Podemos ver como ahora son los dos leds, que estan conectados al mismo pin, parpadear con un retraso de un segundo de manera simultánea.</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/8.mp4" type="video/mp4">
+                            </video></p></figure>
+
+                        <p id="Practica 9">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 9 ~</h2>
+                        <p class="fs-6 mb-4">Para la Practica 9 utilizaremos 2 leds, 2 resistencias, 1 protoboard, cables dupoint y el Arduino Uno, ahora haremos parpadear a dos leds consecutivamente.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">para la programación ahora contamos con dos pinMode, uno para Led, a los que les daremos valores de HIGH y LOW para que parpaden pero de manera invertida, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-0">void setup()</p>
+			    <p class="fs-6 mb-0">{</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(13, OUTPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(12, OUTPUT);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0"></p>
+			    <p class="fs-6 mb-0">void loop()</p>
+			    <p class="fs-6 mb-0">{</p>
+		            <p class="fs-6 mb-0">   digitalWrite(13, HIGH);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(12, LOW);</p>
+		            <p class="fs-6 mb-0">   delay(1000);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(13, LOW);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(12, HIGH);</p>
+		            <p class="fs-6 mb-0">   delay(1000);</p>
+  			    <p class="fs-6 mb-0">}</p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">La única diferencia que encontramos en esta conexión es que ahora cada led tiene un pin diferente, sinedo el 13 y 12 respectivamente.</p>
+			    <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduino2Leds2pin.png" alt="..." /></figure>                            
+
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">La conexion es similar a la anterior, la diferencia es que ahora en vez de conectar las dos resistencias al pin13 ahora a cada resistencia le llega un pin diferente, siendo el 12 y el 13, puesto que ahora cada led hace una acción diferente.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Podemos ver como ahora en vez de que se enciendan los dos leds simultaneamente ahora lo hacen de manera consecutiva, cuando uno se apaga el otro se enciende, como luces de navidad o de policia.</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/9.mp4" type="video/mp4">
+                            </video></p></figure>
+
+                        <p id="Practica 10">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 10 ~</h2>
+                        <p class="fs-6 mb-4">Para la practica 10 Ocupando un Display de 7 segmentos, la protoboar, cables dupoint y la placa Arduino Uno, vamos a conectar y encender algunos elementos del display</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">Los codigos empiezan a ser ya largos por lo que este sera el ultimo que escribire pero los pondre para descargar en caso de que quieras verlo, este codigo solo enciende dos de los 8 leds del displar, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-0">void setup()</p>
+			    <p class="fs-6 mb-0">{</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(13, OUTPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(12, OUTPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(10, OUTPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(9, OUTPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(7, OUTPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(6, OUTPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(5, OUTPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(4, OUTPUT);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0"></p>
+			    <p class="fs-6 mb-0">void loop()</p>
+			    <p class="fs-6 mb-0">{</p>
+		            <p class="fs-6 mb-0">   digitalWrite(6, LOW);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(7, LOW);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(10, LOW);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(12, LOW);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(13, LOW);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(5, LOW);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(4, HIGH);</p>
+		            <p class="fs-6 mb-0">   digitalWrite(9, HIGH);</p>
+		            <p class="fs-6 mb-0">   delay(1000);</p>
+  			    <p class="fs-6 mb-0">}</p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">Para las conexiones o diseño se puede ver como cada punnto del display lelega la placa arduino donde recibira las señales de que led encender y un punto que lleva a la tierra con una resistencia.</p>
+                            <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduinosdisplay.png" alt="..." /></figure>                            
+
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">Cada punto del display encendera uno de sus leds por eso es importante saber como se conecta, empezamos abajo a la izquiera y vamos de forma ascenente ahcia la derecha, de esta forma se conectan todos los leds aunque solo encendemos dos de momento..</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Se puede apreciar como solamente dos partes del segmento se encienden, esto es para ver que exactamente se encienden los que queremos y que las conexiones se hicieron correctamente.</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/10.mp4" type="video/mp4">
+                            </video></p></figure>
+
+                        <p id="Practica 11">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 11 ~</h2>
+                        <p class="fs-6 mb-4">Para la practica 10 Ocupando un Display de 7 segmentos, la protoboar, cables dupoint y la placa Arduino Uno, vamos a conectar y encender algunos elementos del display para lograr visualizar numeros.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">Manteniendo las declaraciones de variables anteriores ahora vamos a hacer que el display cuente desde el 0 al 2, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-4">Descargar codigo Arduino: <a href="files/display_contador.ino">arduino.ino</a> </p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">Las conexiones son las mismas de la practica anterior pues solamente se cambio el codigo.</p>
+                            <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduinosdisplay.png" alt="..." /></figure>                            
+
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">Las conexiones son las anteriores pues solo hubo cambios del codigo, se modifico el software no el hardware.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Con el cambio del codigo ahora podemos ver como el display dibuja 3 numeros intercaladamente con un delay de 1 segundo, siendo el 0, el 1 y el 2.</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/11.mp4" type="video/mp4">
+                            </video></p></figure>
+
+
+                        <p id="Practica 12">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 12 ~</h2>
+                        <p class="fs-6 mb-4">Para la practica 12 utilizaremos la protoboard, la Placa Arduino Uno, cables dupoint, un led, una resistencia y un push button, ahora encenderemos leds con botones.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">Este codigo no es tan largo así que lo pongo, ahora tenemos una variable de salida (LED) y una de entrada (pushh button), simplemente cuando el push button sea precionado dara corriente al led, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-0">void setup()</p>
+			    <p class="fs-6 mb-0">{</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(13, OUTPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(8, INPUT);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0"></p>
+			    <p class="fs-6 mb-0">void loop()</p>
+			    <p class="fs-6 mb-0">{</p>
+		            <p class="fs-6 mb-0">   digitalWrite(13, digitalRead(8));</p>
+  			    <p class="fs-6 mb-0">}</p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">la conexion de este codigo es medianamente simple, usando cables supoint damos fuente al led y al arduino formando una especie de circuito cerrado.</p>
+                            <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduino1led1button.png" alt="..." /></figure>                            
+
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">El pin de entrada va conectada al lado negativo del botton, junto a la resistencia que llega a tierra, por el otro lado tiene la conexion al voltaje, por su parte el led igualmente se conecta como lo tuvimoa antes, el pin de entrada a la resistencia y la resistencia al catodo del del, el anodo del led a la tierra y es todo.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Podemos ver en el video que el led se enciende cuanod se presiona el boton y solamente permanece encendido si el boton igualmente se mantiene prendido, como si el boton fuese el que cerrara el circuito..</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/12.mp4" type="video/mp4">
+                            </video></p></figure>
+
+
+                        <p id="Practica 13">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 13 ~</h2>
+                        <p class="fs-6 mb-4">Para la practica 13 se necesitaran 2 LEDS, 2 push buttons, la protoboard, cables dupoint y la placa Arduino Uno, ahora encenderemos dos leds con botones diferentes.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">Ahora vemos como se duplico el codigo, ahora tenemos dos entradas y dos salidas y casa pin lee la entrada de un boton diferente por lo que cada led enciende con un boton diferente el cual nosotros asignaremos en la construcción, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-0">void setup()</p>
+			    <p class="fs-6 mb-0">{</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(13, OUTPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(8, INPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(11, OUTPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(2, INPUT);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0"></p>
+			    <p class="fs-6 mb-0">void loop()</p>
+			    <p class="fs-6 mb-0">{</p>
+		            <p class="fs-6 mb-0">   digitalWrite(13, digitalRead(8));</p>
+		            <p class="fs-6 mb-0">   digitalWrite(13, digitalRead(2));</p>
+  			    <p class="fs-6 mb-0">}</p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">La conexion es la misma agregando otro led de la misma forma, como haciendo un copiar y pegar del diseño anterior.</p>
+                            <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduino2leds2button.png" alt="..." /></figure>                            
+
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">solo tenemos que repetir los pasos anteriores para gregar otro boton con su correspondiente led.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Podemos apreciar como cada led enciende el LED correspondiente al que fue conectado, son dos botones independiendes, el que se encienda uno no afecta al otro.</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/13.mp4" type="video/mp4">
+                            </video></p></figure>
+
+
+                        <p id="Practica 14">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 14 ~</h2>
+                        <p class="fs-6 mb-4">La practica 14 es la misma estructura de la practica 12 pero con un diferente codigo.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">El codigo es una variante de la practica 12, utilizando if else por lo que se alarga un poco el codigo pero hacen lo mismo, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-4">Descargar codigo Arduino: <a href="files/13.ino">codigo.ino</a> </p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">El diseño ya se realizo es el mismo de la practica 12.</p>
+			    <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduino1led1button.png" alt="..." /></figure>                            
+
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">La construccion es la misma de la practica 12 por lo que no es necesario explicarla de nuevo.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Observamos que hace lo mismo que la practica 12, lo que nos indica que se puede hacer el mismo codigo de diferentes manera pero obteniendo el mismo resultado, y estas variantes nos serviran dependiendo de que queremos que haga exactamente.</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/14.mp4" type="video/mp4">
+                            </video></p></figure>
+
+
+                        <p id="Practica 15">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 15 ~</h2>
+                        <p class="fs-6 mb-4">De nueva cuenta la practica 15 es una variante de la practica 13.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">De nueva cuenta es una variante del codigo de la practica 13 pero con else if, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-4">Descargar codigo Arduino: <a href="files/14.ino">codigo.ino</a> </p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">El diseño es el mismo de la practica 13.</p>
+                            <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduino2leds2button.png" alt="..." /></figure>                            
+
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">De nueva cuenta ya se hizo el diseño por lo que no se debe de explicar.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Como podemos apreciar de nueva cuenta hace los mismo de la practica 13 por lo que vemos que si podemos hacer lo mismo con diferentes codigos.</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/15.mp4" type="video/mp4">
+                            </video></p></figure>
+
+
+                        <p id="Practica 16">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 16 ~</h2>
+                        <p class="fs-6 mb-4">Para la practica 16 vamos a simular la compuerta logica or con botones.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">para la programación ahora comparamos las entradas que se obtienen de los botones, donde cualquiera que sea la entrada, sea de uno u otro botton el led encendera , el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-0">void setup()</p>
+			    <p class="fs-6 mb-0">{</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(13, OUTPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(8, INPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(2, INPUT);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0"></p>
+			    <p class="fs-6 mb-0">void loop()</p>
+			    <p class="fs-6 mb-0">{</p>
+		            <p class="fs-6 mb-0">   if (digitalRead(8) == HIGH || digitalRead(2) == HIGH)</p>
+			    <p class="fs-6 mb-0">{</p>
+			    <p class="fs-6 mb-0">    digitalWrite(13, HIGH);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0">else</p>
+			    <p class="fs-6 mb-0">{</p>
+			    <p class="fs-6 mb-0"    digitalWrite(13, LOW);</p>
+			    <p class="fs-6 mb-0">}</p>
+  			    <p class="fs-6 mb-0">}</p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">Para las conexiones fisicas usaremos tres resistencias, el arudino Uno, un led, dos push button y cables dupoint macho-macho.</p>
+                            <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduinoor.png" alt="..." /></figure>
+
+                            
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">Como se ve en el diseño de la imagena nterior las conexiones del led se arma como se viene haciedno en las anteriores prácticas, de igual manera lo hacen los botones puesto que lo importante en este caso es el codigo no tanto la complejidad de las conexiones.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Como se explico en el codigo el led enciende si se presiona cualqueira de los dos botones.</p>
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/16.mp4" type="video/mp4">
+                            </video></p></figure>
+
+
+                        <p id="Practica 17">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 17 ~</h2>
+                        <p class="fs-6 mb-4">Para la practica 17 se va a simular la compuerta logica and.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">para la programación comparamos los valores de entrada para que solamente encienda el led cuando estos son iguales, y solo cuando son iguales, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-0">void setup()</p>
+			    <p class="fs-6 mb-0">{</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(13, OUTPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(8, INPUT);</p>
+  		  	    <p class="fs-6 mb-0">   pinMode(2, INPUT);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0"></p>
+			    <p class="fs-6 mb-0">void loop()</p>
+			    <p class="fs-6 mb-0">{</p>
+		            <p class="fs-6 mb-0">   if (digitalRead(8) == HIGH && digitalRead(2) == HIGH)</p>
+			    <p class="fs-6 mb-0">{</p>
+			    <p class="fs-6 mb-0">    digitalWrite(13, HIGH);</p>
+			    <p class="fs-6 mb-0">}</p>
+			    <p class="fs-6 mb-0">else</p>
+			    <p class="fs-6 mb-0">{</p>
+			    <p class="fs-6 mb-0"     digitalWrite(13, LOW);</p>
+			    <p class="fs-6 mb-0">}</p>
+  			    <p class="fs-6 mb-0">}</p>
+
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">Las conexiones son las mismas que la práctica anteriro solamente se va a cambiar las intrucciones del codigo.</p>
+                            <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduinoor.png" alt="..." /></figure>                            
+
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">como se aprecia el armado es similar al de la práctica anterior puesto que solo se ve afectado el codigo.</p>
+                            
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Ahora vemos que el led solo enciende cuando los dos botones son presionados, y solamente enciende cuando esto ocurra.</p>
+
+                            <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/17.mp4" type="video/mp4">
+                            </video></p></figure>
+
+
+<p id="Practica 18">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">~ Practica 18 ~</h2>
+                        <p class="fs-6 mb-4">Para finalizar, en la práctica 18 realizaremos un contador con 4 leds y un boton.</p>
+
+                        
+                            <p id="Programa">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Programa</h1>
+                            <p class="fs-6 mb-4">para la programación el codigo es un poco largo por lo que dejare el descargable si quieren verlo, el codigo es el siguiente:</p>
+                            <p class="fs-6 mb-4">Descargar codigo Arduino: <a href="files/17.ino">codigo.ino</a> </p>
+
+                            <p id="Conexión fisica ">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño fisico</h1>
+                            <p class="fs-6 mb-4">Para las conexiones fisicas utilizaremos 5 resistencias, 4 leds, un boton, la protoboard, el Arduino Uno y los cables dupoint para las conexiones.</p>
+                            <figure class="mb-0" align="center"><img class="img-fluid rounded"  width="600px" src="img/arduinocont.png" alt="..." /></figure>
+                            
+                            <p id="construccion">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
+                            <p class="fs-6 mb-4">Cada led es conectado a un diferente pin de entrada y con la resistencia al GND, el boton de igualmente tendra un pin y tierra, el led dara potencia a la protoboard y ese en sencillos pasos es la estructura de nuestra práctica.</p>
+
+			    <p id="Resultados">
+                            <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Resultados</h1>
+                            <p class="fs-6 mb-4">Cada vez que se presiona el boton aumenta el valor en 1 en los leds como si fuera decimal, no binario, hasta que se enciendan los 4 leds, de alli se vuelve a repetir el ciclo de suma.</p>
+                <figure class="mb-4" align="center"><video width="80%"  controls>
+                            <source src="video/18.mp4" type="video/mp4">
+                            </video></p></figure>
+
+
+                        <p id="conclusiones">
+                        <h2 class="fw-bolder mb-4 mt-5 fs-5">- Conclusiones -</h2>
+                        <p class="fs-6 mb-4">Todas las practicas fueron en general una introduccion al arduino, tenemos entradas y salidas de datos (todas digitales), el uso de los cables, la protoboard, los botones. Elementos basicos pero que terminamos utilizando mucho durante nuestra carrera para verificar si funcinan los codigos o si esta todo bien conectado.</p>
+                       
+
+                </div>
+            </section>
+
+            
+        </main>
+
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Ingenierias-iberopuebla.mx 2023</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Privacy</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Terms</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
